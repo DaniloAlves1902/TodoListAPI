@@ -67,7 +67,7 @@ public class TodoListService {
         }
 
         if (nameTodo.trim().isEmpty()) {
-            throw new IllegalArgumentException("Error: The name cannot be null or empty.");
+            throw new NameNotFoundException("Error: The name cannot be null or empty.");
         }
         return todoListRepository.findByNameTodoIgnoreCase(nameTodo);
     }
